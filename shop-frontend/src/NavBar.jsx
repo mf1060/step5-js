@@ -31,12 +31,7 @@ const setSearch = () => {
       <nav id="nav_bar_1" class="navbar navbar-expand-lg navbar-dark">
         {/*Adds a logo with the link to the home page */}
         <a class="navbar-brand" href="/">Michael's Shop</a>
-        {/*Adds a hamburger button 
-           Reference: https://getbootstrap.com/docs/4.0/components/navbar/ */}
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="collapse navbar-collapse" id="nav-1">
           {/* Using a search bar with a bootstrap nav component, reference: https://getbootstrap.com/docs/4.0/components/navbar/*/}
             <input onChange={setSearch} id="search" name="search" class="form-control mr-sm-2" placeholder="Search" aria-label="Search" />
             {/*Using a magnifying glass icon: https://icons.getbootstrap.com/icons/search/ */}
@@ -51,26 +46,59 @@ const setSearch = () => {
             </a>
         </div>
       </nav>
-
+      
       <div id="nav_bar_2">
         <nav id="nav-bar" class="navbar navbar-expand-lg navbar-dark">
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          {/* Using a toggle navbar with the following reference: https://getbootstrap.com/docs/4.0/components/navbar/*/}
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-2" aria-controls="nav-2" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+          <div class="collapse navbar-collapse" id="nav-2">
           <div class="navbar-nav">
-            <a href="/" class="nav-item nav-link">All</a>
-            <a href="/featured" class="nav-item nav-link">Featured Items</a>
-            <a href="/home-care" class="nav-item nav-link">Home Care</a>
-            <a href="/office-supplies" class="nav-item nav-link">Office Supplies</a>
-            <a class="nav-item nav-link">Medical Care</a>
-            <a class="nav-item nav-link">Best Sellers</a>
-            <a class="nav-item nav-link">Books</a>
-            <a class="nav-item nav-link">Today's Deals</a>
-            <a class="nav-item nav-link">Gift Cards</a>
-            <a class="nav-item nav-link">Sell</a>
-            <a class="nav-item nav-link">Groceries</a>
-            <a class="nav-item nav-link">New Releases</a>
-            <a class="nav-item nav-link">Registry</a>
-            <a class="nav-item nav-link">Smart Home</a>
-            <a href="/admin" class="nav-item nav-link">Admin</a>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a href="/" class="nav-link">All</a>
+            </li>
+            <li class="nav-item">
+              <a href="/featured" class="nav-link">Featured Items</a>
+            </li>
+            <li class="nav-item">
+              <a href="/home-care" class="nav-link">Home Care</a>
+            </li>
+            <li class="nav-item">
+              <a href="/office-supplies" class="nav-link">Office Supplies</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Medical Care</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Best Sellers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Books</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Today's Deals</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Gift Cards</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Sell</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Groceries</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">New Releases</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Registry</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled">Smart Home</a>
+            </li>
+            </ul>
         </div>
         </div>
         </nav>
