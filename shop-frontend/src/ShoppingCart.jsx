@@ -14,7 +14,6 @@ function Cart(props){
       //Reference: https://getbootstrap.com/docs/4.0/content/tables/
       <div id="cart">
         <h1>Cart</h1>
-        <a href="/Cart"><button id="cart-button" class="btn btn-primary">Go to Cart</button></a>
         <table class="table">
         <thead>
           <tr>
@@ -38,6 +37,7 @@ function Cart(props){
     
     {/*Adds a total at the bottom of the page */}
     <p>Total: ${cartTotal.toFixed(2)}</p>
+    <a href="/checkout"><button id="cart-button" class="btn btn-primary">Checkout</button></a>
     </div>
     )
 }

@@ -7,6 +7,8 @@ import NavBar from './NavBar';
 import ItemPage from './ItemPage';
 import SearchResults from './SearchResults';
 import Cart from './ShoppingCart';
+import Checkout from './Checkout';
+import PlaceOrderPage from './PlaceOrderPage';
 
 
 function App() {
@@ -56,6 +58,8 @@ function App() {
 
         {/*Create useParams, reference: https://reactrouter.com/api/hooks/useParams*/}
         <Route path="/search/:searchTerm" element={<SearchResults allItems={allItems} searchTerm={searchTerm} />} />
+        <Route path="/checkout" element={<Checkout cartItems={cartItems}/>} />
+        <Route path="/orderPlaced" element={<PlaceOrderPage />} />
       </Routes>
 
     </BrowserRouter>
@@ -65,6 +69,7 @@ function App() {
 
     <div class="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" data-bs-scroll="true">
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <a href="/Cart"><button id="cart-button" class="btn btn-primary">Go to Cart</button></a>
         <ShoppingCart cartItems={cartItems} />
         
     </div>
