@@ -1,5 +1,6 @@
 import Carousel from "./Carousel";
 import Card from './Card';
+import Category from "./Category";
 
 function Home(props){
 
@@ -10,18 +11,9 @@ function Home(props){
             <p class="lead">Check out our featured items below!</p>
             {/* Adds the Carousel Component */}
             <Carousel allItems = {props.allItems}/>
-            <div class="row">
-
-        <h1>Featured Items</h1>
-        
-      {props.allItems.map((t) => {
-          return (
-          //Arranges cards so that there are four cards in each row in the search results.
-          <div key={t.id} class="col-sm-3">
-          <Card item={t} />
-          </div>
-        )})}
-        </div>
+            <Category allItems = {props.allItems} searchCategory={"Featured Items"} />
+            <Category allItems = {props.allItems} searchCategory={"Home Care"} />
+            <Category allItems = {props.allItems} searchCategory={"Office Supplies"} />
         </>
     )
 

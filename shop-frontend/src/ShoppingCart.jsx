@@ -1,4 +1,5 @@
 import QuantityToggle from './QuantityToggle';
+import Category from './Category';
 
 function Cart(props){
     
@@ -41,6 +42,7 @@ function Cart(props){
     {/*Adds a total at the bottom of the page */}
     <p>Total: ${cartTotal.toFixed(2)}</p>
     <a href="/checkout"><button id="cart-button" class="btn btn-primary">Checkout</button></a>
+    <Category allItems = {props.allItems} searchCategory={"Featured Items"} />
     </div>
     )
 }

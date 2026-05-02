@@ -42,7 +42,7 @@ function PlaceOrder(props){
                 <thead>
 
                 </thead>
-                <br></br>
+                
                 <tbody>
                     <tr>
                         <td>Item:</td>

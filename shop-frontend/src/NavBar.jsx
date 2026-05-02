@@ -56,7 +56,10 @@ const setSearch = () => {
         <nav id="nav-bar" class="navbar navbar-expand-lg navbar-dark">
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link">All</a>
+            <a href="/" class="nav-item nav-link">All</a>
+            <a href="/featured" class="nav-item nav-link">Featured Items</a>
+            <a href="/home-care" class="nav-item nav-link">Home Care</a>
+            <a href="/office-supplies" class="nav-item nav-link">Office Supplies</a>
             <a class="nav-item nav-link">Medical Care</a>
             <a class="nav-item nav-link">Best Sellers</a>
             <a class="nav-item nav-link">Books</a>
