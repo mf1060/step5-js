@@ -70,6 +70,7 @@ const setSearch = () => {
             <a class="nav-item nav-link">New Releases</a>
             <a class="nav-item nav-link">Registry</a>
             <a class="nav-item nav-link">Smart Home</a>
+            <a href="/admin" class="nav-item nav-link">Admin</a>
         </div>
         </div>
         </nav>
