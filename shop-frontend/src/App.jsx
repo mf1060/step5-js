@@ -9,6 +9,7 @@ import SearchResults from './SearchResults';
 import Cart from './ShoppingCart';
 import Checkout from './Checkout';
 import PlaceOrderPage from './PlaceOrderPage';
+import Category from './Category';
 
 
 function App() {
@@ -48,7 +49,7 @@ function App() {
         <Route path="/" element={<Home allItems={allItems}/>} />
         {/*Creating a route for the search bar */}
         
-        <Route path="/Cart" element={<ShoppingCart cartItems={cartItems} />} />
+        <Route path="/Cart" element={<ShoppingCart allItems={allItems} cartItems={cartItems} />} />
 
         {/*Creating a route for an ItemPage to each item in the database */}
         {/*This will likely be implemented with a map function in the future */}
@@ -60,6 +61,9 @@ function App() {
         <Route path="/search/:searchTerm" element={<SearchResults allItems={allItems} searchTerm={searchTerm} />} />
         <Route path="/checkout" element={<Checkout cartItems={cartItems}/>} />
         <Route path="/orderPlaced" element={<PlaceOrderPage />} />
+        <Route path="/featured" element={<Category allItems = {allItems} searchCategory={"Featured Items"} />} />
+        <Route path="/home-care" element={<Category allItems = {allItems} searchCategory={"Home Care"} />} />
+        <Route path="/office-supplies" element={<Category allItems = {allItems} searchCategory={"Office Supplies"} />} />
       </Routes>
 
     </BrowserRouter>
@@ -70,7 +74,7 @@ function App() {
     <div class="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" data-bs-scroll="true">
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         <a href="/Cart"><button id="cart-button" class="btn btn-primary">Go to Cart</button></a>
-        <ShoppingCart cartItems={cartItems} />
+        <ShoppingCart allItems={allItems} cartItems={cartItems} />
         
     </div>
       
