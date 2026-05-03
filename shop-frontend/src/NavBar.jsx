@@ -98,6 +98,9 @@ const setSearch = () => {
             <li class="nav-item">
               <a class="nav-link disabled">Smart Home</a>
             </li>
+            <li class="nav-item">
+              <a href="/admin" class="nav-link">Admin</a>
+            </li>
             </ul>
         </div>
         </div>
