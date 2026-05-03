@@ -74,13 +74,15 @@ function App() {
 
     </BrowserRouter>
 
-    {/*Using off canvas from Bootstrap:
-    https://getbootstrap.com/docs/5.3/components/offcanvas/ */}
+    {/*Using off canvas and an offcanvas-body element with Bootstrap:
+    using the following reference, https://getbootstrap.com/docs/5.3/components/offcanvas/ */}
 
     <div class="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" data-bs-scroll="true">
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        <a href="/Cart"><button id="cart-button" class="btn btn-primary">Go to Cart</button></a>
-        <ShoppingCart allItems={allItems} cartItems={cartItems} />
+        <div class="offcanvas-body justify-content-end flex-grow-1 pe-3">
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          <a href="/Cart"><button id="cart-button" class="btn btn-primary">Go to Cart</button></a>
+          <ShoppingCart allItems={allItems} cartItems={cartItems} />
+        </div>
         
     </div>
       

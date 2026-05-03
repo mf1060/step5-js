@@ -12,6 +12,7 @@ function Category({allItems, searchCategory}){
 
   return(
     <>
+    <div>
       <h1>{searchCategory}</h1>
       <div class="row">
       {/*Displaying a card for each search result*/}
@@ -24,6 +25,7 @@ function Category({allItems, searchCategory}){
         )
       })}
 
+      </div>
       </div>
     </>
   );
