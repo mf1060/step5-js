@@ -59,3 +59,7 @@ i#green-check{
     animation-name: greenCheck;
     animation-duration: 1s;
 }
+
+p#cart-offcanvas {
+    color: red
+}

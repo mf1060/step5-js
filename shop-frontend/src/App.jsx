@@ -13,6 +13,7 @@ import Category from './Category';
 import Admin from "./Admin";
 import AddItem from "./AddItem";
 import DeleteItem from "./DeleteItem";
+import OffCanvas from './OffCanvas';
 
 
 function App() {
@@ -80,8 +81,7 @@ function App() {
     <div class="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" data-bs-scroll="true">
         <div class="offcanvas-body justify-content-end flex-grow-1 pe-3">
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          <a href="/Cart"><button id="cart-button" class="btn btn-primary">Go to Cart</button></a>
-          <ShoppingCart allItems={allItems} cartItems={cartItems} />
+          <OffCanvas cartItems={cartItems}/>
         </div>
         
     </div>
