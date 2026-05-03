@@ -10,13 +10,18 @@ function ItemPage(props){
          {/*Uses a side-by-side layout with the following reference: https://getbootstrap.com/docs/4.0/layout/grid/ */}
         <div class = "container">
            <div class="row">
-            <div class="col">
-                <h1>{props.item.title}</h1>
-                <p>{props.item.description}</p>
-            {/*Adds the card for each item */}
-             </div>
                 <div class="col">
-                    <Card item={props.item} />
+                    <a href={`/${props.item.id}`}><img class="card-img-top" src={props.item.img} alt={props.item.altImg} /></a>
+                </div>
+                <div class="col">
+                    <h1>{props.item.title}</h1>
+                    <h2>Product Details</h2>
+                    <p>{props.item.description}</p>
+                    <h3 class="card-text">$ {parseFloat(props.item.price).toFixed(2)}</h3>
+                </div>
+                <div class="col">
+                    <h1>In Stock</h1>
+                    <QuantityToggle id = {props.item.id} quantity={props.item.quantity} />
                 </div>
             </div>   
         </div>
