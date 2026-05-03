@@ -10,6 +10,9 @@ import Cart from './ShoppingCart';
 import Checkout from './Checkout';
 import PlaceOrderPage from './PlaceOrderPage';
 import Category from './Category';
+import Admin from "./Admin";
+import AddItem from "./AddItem";
+import DeleteItem from "./DeleteItem";
 
 
 function App() {
@@ -64,6 +67,9 @@ function App() {
         <Route path="/featured" element={<Category allItems = {allItems} searchCategory={"Featured Items"} />} />
         <Route path="/home-care" element={<Category allItems = {allItems} searchCategory={"Home Care"} />} />
         <Route path="/office-supplies" element={<Category allItems = {allItems} searchCategory={"Office Supplies"} />} />
+        <Route path="/admin" element={<Admin />} />
+        <Route path="/addItem" element={<AddItem  />} />
+        <Route path="/deleteItem" element={<DeleteItem allItems={allItems}/>} />
       </Routes>
 
     </BrowserRouter>
