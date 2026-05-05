@@ -63,3 +63,8 @@ i#green-check{
 p#cart-offcanvas {
     color: red
 }
+
+img#small-img {
+    height: 100px;
+    width: 100px
+}
