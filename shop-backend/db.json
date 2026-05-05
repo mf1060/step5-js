@@ -49,11 +49,11 @@
       "title": "Listerine",
       "description": "A small bottle of mouthwash for travel purposes.",
       "category": "Home Care",
-      "inCart": true,
+      "inCart": false,
       "img": "/listerine.jpeg",
       "altImg": "Listerine",
       "price": 5.23,
-      "quantity": 1
+      "quantity": 0
     },
     {
       "id": "6",
@@ -93,22 +93,22 @@
       "title": "Stapler",
       "description": "A reliable stapler",
       "category": "Office Supplies",
-      "inCart": true,
+      "inCart": false,
       "img": "/stapler.jpeg",
       "altImg": "Stapler",
       "price": 7.75,
-      "quantity": 1
+      "quantity": 0
     },
     {
       "id": "10",
       "title": "Tums",
       "description": "A travel-sized tums for indigestion.",
       "category": "Home Care",
-      "inCart": true,
+      "inCart": false,
       "img": "/tums.jpeg",
       "altImg": "Tums",
       "price": 3.1,
-      "quantity": 1
+      "quantity": 0
     },
     {
       "id": "11",

@@ -58,7 +58,7 @@ function App() {
         {/*Creating a route for an ItemPage to each item in the database */}
         {/*This will likely be implemented with a map function in the future */}
         {allItems.map((t) => (
-            <Route path={`/${t.id}`} element={<ItemPage item={t} />} />  
+            <Route path={`/${t.id}`} element={<ItemPage item={t} cartItems={cartItems} allItems={allItems}/>} />  
         ))}
 
         {/*Create useParams, reference: https://reactrouter.com/api/hooks/useParams*/}
