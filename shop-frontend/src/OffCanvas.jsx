@@ -13,7 +13,7 @@ function OffCanvas(props){
       <>
       <p>Subtotal</p>
       <p id="cart-offcanvas">${cartTotal.toFixed(2)}</p>
-      <p>Your order quanlifies for FREE delivery.</p>
+      <p>Your order qualifies for FREE delivery.</p>
       <a href="/Cart"><button id="cart-button" class="btn btn-primary">Go to Cart</button></a>
       {/*Using Bootstrap Tables to create spacing for the Cart Items
       //Reference: https://getbootstrap.com/docs/4.0/content/tables/ */}

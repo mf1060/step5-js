@@ -1,6 +1,8 @@
 import Card from './Card';
 import QuantityToggle from './QuantityToggle';
 import { useState } from 'react';
+import Category from './Category';
+
 //This is the component for each individual item page.
 function ItemPage(props){
     //Sets the url for the server
@@ -8,9 +10,14 @@ function ItemPage(props){
     //Sets states for the quantity
 
     const [inCartPage, setInCartPage] = useState(false);
-    const [quantity, setQuantity] = useState(0);
-    //Uses a side-by-side layout with the following reference: https://getbootstrap.com/docs/4.0/layout/grid/ 
+    const [quantity, setQuantity] = useState(props.item.quantity);
 
+    let cartTotal = 0
+  
+    props.cartItems.map((t) => {
+        cartTotal += (t.price * t.quantity)
+    })
+    
      //Function for updating the server when users add or substract items
     const updateDropdown = (id, quantityVar) => {
         //Set in cart page to true. 
@@ -42,7 +49,7 @@ function ItemPage(props){
         });
 
     }
-
+//Uses a side-by-side layout with the following reference: https://getbootstrap.com/docs/4.0/layout/grid/ 
     const page = (
         <div class = "container">
            <div class="row">
@@ -83,9 +90,23 @@ function ItemPage(props){
 
     const cartPage = (
         <>  
-            <i id="green-check" class="bi bi-check-circle"></i>
-            <a href={`/${props.item.id}`}><img id="small-img" class="card-img-top" src={props.item.img} alt={props.item.altImg} /></a>
-            <h1>It's in the cart!</h1>
+            <div class="table">
+                <div class="row">
+                    <div class="col">
+                        <a href={`/${props.item.id}`}><img id="small-img" class="card-img-top" src={props.item.img} alt={props.item.altImg} /></a>
+                        <i id="green-check" class="bi bi-check-circle"></i>
+                        <h1>Added to cart</h1>
+                    </div>
+                    <div class="col">
+                        <h2>Cart Subtotal: ${cartTotal.toFixed(2)}</h2>
+                        <a href="/Cart"><button id="cart-button" class="btn btn-primary">Go to Cart</button></a>
+                        <a href="/checkout"><button id="cart-button" class="btn btn-primary">Checkout</button></a>
+                    </div>
+                </div>
+                <div class="row">
+                    <Category allItems = {props.allItems} searchCategory={"Featured Items"} />
+                </div>
+            </div>
         </>
     )
     
@@ -93,7 +114,7 @@ function ItemPage(props){
     return (
 
         <>
-            {inCartPage ? page: cartPage}
+            {inCartPage ? cartPage: page}
         </>
 
     );
