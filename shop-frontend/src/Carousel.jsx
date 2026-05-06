@@ -14,7 +14,12 @@ return(
       {/* Using Bootstrap "jumbotron class with the following reference: https://getbootstrap.com/docs/4.0/components/jumbotron/ */}
       <div class="jumbotron">
         <div class="jumbotron">
-          <p class="lead">The one-stop shop for any home or office needs</p>
+          <div class="body">
+            <div class="card-body">
+              <p class="lead">The one-stop shop for any home or office needs.</p>
+                <img class="card-img-bottom" src="/flowers.jpeg"></img>  
+            </div>
+          </div>    
         </div>
       </div>
     </div>
