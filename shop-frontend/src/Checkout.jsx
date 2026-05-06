@@ -4,8 +4,9 @@ import ContactForm from "./ContactForm";
 import PaymentForm from "./PaymentForm";
 
 function Checkout(props){
-    //Using forms from bootstrap
+    //Using forms from bootstrap, using the following reference:
     //https://getbootstrap.com/docs/4.0/components/forms/
+
     return (
         <>
          {/*Uses a side-by-side layout with the following reference: https://getbootstrap.com/docs/4.0/layout/grid/ */}
