@@ -81,7 +81,7 @@ function App() {
     <div class="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel" data-bs-scroll="true">
         <div class="offcanvas-body justify-content-end flex-grow-1 pe-3">
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          <OffCanvas cartItems={cartItems}/>
+          <OffCanvas />
         </div>
         
     </div>
