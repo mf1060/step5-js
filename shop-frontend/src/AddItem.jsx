@@ -5,7 +5,7 @@ function AddItem(){
     const API_URL = 'http://localhost:5000/items';
 
     const addNewItem = () =>{
-
+        //Defining variables from the form.
         const title = document.getElementById("title").value
         const description = document.getElementById("description").value
         const category = document.getElementById("category").value
@@ -14,6 +14,7 @@ function AddItem(){
         //Reference: https://www.w3schools.com/jsref/jsref_string_replaceall.asp
         const fileName = "/" + title.toLowerCase().replaceAll(" ", "_") + ".jpeg"
 
+        //The post command for adding new products to the database.
         fetch(API_URL, {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},

@@ -57,18 +57,18 @@ function ItemPage(props){
     const page = (
         <div class = "container">
            <div class="row">
-                {/*Dispays the image of the item added in one column */}
+                {/*Displays the image of the item added in one column */}
                 <div class="col">
                     <a href={`/${props.item.id}`}><img class="card-img-top" src={props.item.img} alt={props.item.altImg} /></a>
                 </div>
-                {/*Dispays the title, description, and price in a second column */}
+                {/*Displays the title, description, and price in a second column */}
                 <div class="col">
                     <h1>{props.item.title}</h1>
                     <h2>Product Details</h2>
                     <p>{props.item.description}</p>
                     <h3 class="card-text">$ {parseFloat(props.item.price).toFixed(2)}</h3>
                 </div>
-                {/*Dispays the selector for quantity in the third column */}
+                {/*Displays the selector for quantity in the third column */}
                 <div class="col">
                     <h1>In Stock</h1>
                     {/*Using a select type, with the 
@@ -83,7 +83,7 @@ function ItemPage(props){
                     </select>
                     <br />
                     {/*Only displays the "Add to Cart" button
-                    Typing to a number with the following reference:
+                    Typing to Number with the following reference:
                     https://www.w3schools.com/js/js_datatypes.asp */}
                     <button id="add-to-cart" data-bs-toggle="offcanvas" 
                     data-bs-target="#offcanvasRight" 

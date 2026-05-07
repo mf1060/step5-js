@@ -11,7 +11,7 @@ return(
     <div id="product-carousel" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      {/* Using Bootstrap "jumbotron class with the following reference: https://getbootstrap.com/docs/4.0/components/jumbotron/ */}
+      {/* Using Bootstrap jumbotron class with the following reference: https://getbootstrap.com/docs/4.0/components/jumbotron/ */}
       <div class="jumbotron">
         <div class="jumbotron">
           <div class="body">

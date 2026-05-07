@@ -44,8 +44,8 @@ function OffCanvas(){
             <tr key={t.id}>
               {/*Adds a link to each item page for the title */}
               <td><a href={`/${t.id}`}>{t.title}</a></td>
-              {/*Use image sizing, with the following reference: https://www.w3schools.com/tags/att_img_width.asp */}
               <td>${t.price.toFixed(2)}</td>
+              {/*Use image sizing, with the following reference: https://www.w3schools.com/tags/att_img_width.asp */}
               <td><img src={t.img} height="50" width="50" /></td>
               <td><QuantityToggle id = {t.id} quantity={t.quantity}/> </td>
             </tr>  

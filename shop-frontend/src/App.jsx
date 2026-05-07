@@ -17,10 +17,13 @@ import OffCanvas from './OffCanvas';
 
 
 function App() {
-
+  //API for the product items
   const API_URL = 'http://localhost:5000/items';
+  //Setting state for all items
   const [allItems, setAllItems] = useState([]);
+  //Setting state for cart items
   const [cartItems, setCartItems] = useState([]);
+  //Setting state for search terms from the nav bar
   const [searchTerm, setSearchTerm] = useState('');
 
   useEffect(() => {
@@ -56,7 +59,6 @@ function App() {
         <Route path="/Cart" element={<ShoppingCart allItems={allItems} cartItems={cartItems} />} />
 
         {/*Creating a route for an ItemPage to each item in the database */}
-        {/*This will likely be implemented with a map function in the future */}
         {allItems.map((t) => (
             <Route path={`/${t.id}`} element={<ItemPage item={t} cartItems={cartItems} allItems={allItems}/>} />  
         ))}

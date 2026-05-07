@@ -24,8 +24,8 @@ function DeleteItem(props){
             <tr key={t.id}>
               {/*Adds a link to each item page for the title */}
               <td><a href={`/${t.id}`}>{t.title}</a></td>
-              {/*Use image sizing, with the following reference: https://www.w3schools.com/tags/att_img_width.asp */}
-              <td>${t.price}</td>
+              <td>${t.price.toFixed(2)}</td>
+               {/*Use image sizing, with the following reference: https://www.w3schools.com/tags/att_img_width.asp */}
               <td><img src={t.img} height="100" width="100" /></td>
               <td><button onClick={() => deleteItem(t.id)} class="btn btn-danger">Delete Item</button></td>
             </tr>  
